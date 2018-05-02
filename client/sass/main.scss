@@ -4,6 +4,10 @@
   box-shadow: $x $y $offset $blur rgba(0, 0, 0, 0.61);
 }
 
+@mixin text-shadow($ems) {
+  text-shadow: 0 $ems $ems rgba(0, 0, 0, 0.85);
+}
+
 body {
   background: rebeccapurple;
   color: wheat;
@@ -19,7 +23,7 @@ body {
 
 .movie-card {
   flex-basis: 30%;
-  text-align: center;
+  text-align: left;
   margin: 10px 0;
   padding-bottom: 12px;
   position: relative;
@@ -27,5 +31,30 @@ body {
 
   img {
     max-width: 300px;
+  }
+
+  .button {
+      background-color: #bada55;
+      cursor: pointer;
+      display:inline-block;
+      padding: 0.5em 0.9em;
+      position: absolute;
+      top: 1.5%;
+      left: 75%;
+      border:0.16em solid rgba(255, 255, 255, 1);
+      border-radius: 0.3em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:'Roboto',
+      sans-serif;
+      font-weight:300;
+      color:#FFFFFF;
+      @include text-shadow(0.04em);
+      text-align:center;
+      transition: all 0.2s;
+
+      &:hover {
+        border-color: rebeccapurple;
+      }
   }
 }
