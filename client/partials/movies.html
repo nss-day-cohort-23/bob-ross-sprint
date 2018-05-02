@@ -5,8 +5,8 @@
 
 <div class="movie-container">
   <div class="movie-card" ng-repeat="movie in movieList">
-    <h4>{{movie.title}}</h4>
+    <h4>{{movie.maintitle}}</h4>
     <img ng-src={{movie.poster}} alt="poster for {{movie.title}}">
-    <a class="button" ng-click="addToWatchlist(foo)">ADD</a>
+    <a class="button" ng-click="addToWatchlist(movie.imdbid)">ADD</a>
   </div>
 </div>
